@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta N2 Urban Food | Hamburguesas y Frankfurts en Badalona</title>
+    <meta name="description"
+        content="Descubre Ruta N2 Urban Food, tu restaurante en Badalona. Disfruta de hamburguesas de chuletón, frankfurts, tapas y el mejor ambiente retro industrial.">
+    <meta name="keywords"
+        content="restaurante en badalona, hamburguesas badalona, frankfurts badalona, cena badalona, comida rápida calidad, ruta n2 urban food, tapas, eventos">
+    <meta name="author" content="Ruta N2 Urban Food">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ruta N2 Urban Food | Restaurante en Badalona">
+    <meta property="og:description"
+        content="Hamburguesas de chuletón, Frankfurts, tapas espectaculares y gran ambiente retro industrial en Badalona.">
+    <meta property="og:type" content="restaurant.restaurant">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Ruta N2 Urban Food",
+      "description": "Hamburguesas de chuletón, Frankfurts variados y el mejor ambiente retro industrial en Badalona.",
+      "telephone": "931234567",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ctra. de Mataró, 26",
+        "addressLocality": "Badalona",
+        "postalCode": "08911",
+        "addressCountry": "ES"
+      },
+      "servesCuisine": ["Hamburguesas", "Frankfurts", "Tapas"]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@300;400;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #E63946;
+            --secondary: #FFB703;
+            --green: #1F8A4C;
+            --dark: #121212;
+            --black: #050505;
+            --white: #FFFFFF;
+            --gray: #2A2A2A;
+            --font-main: 'Inter', sans-serif;
+            --font-logo: 'Bungee', cursive;
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .logo {
+            font-family: var(--font-logo);
+            text-transform: uppercase;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('Fotos/Fondo%20pagina%20principal.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            z-index: 10;
+            max-width: 1000px;
+            animation: fadeIn 1s ease-out;
+            transform: translateY(-80px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: clamp(3rem, 12vw, 7rem);
+            color: var(--primary);
+            text-shadow: 6px 6px 0px var(--white);
+            margin-bottom: 10px;
+            line-height: 0.9;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        .btn-main {
+            display: inline-block;
+            padding: 20px 40px;
+            background: var(--primary);
+            color: white;
+            font-family: var(--font-logo);
+            font-size: 1.2rem;
+            border: 3px solid white;
+            box-shadow: 8px 8px 0px var(--white);
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border-radius: 0;
+        }
+
+        .btn-main:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px var(--white);
+            background: var(--secondary);
+            color: var(--black);
+        }
+
+        /* Scroll Indicator */
+        .scroll-down {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--white);
+            font-family: var(--font-logo);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            animation: bounce 2s infinite;
+            z-index: 10;
+        }
+
+        .scroll-down span {
+            width: 25px;
+            height: 25px;
+            border-bottom: 4px solid var(--primary);
+            border-right: 4px solid var(--primary);
+            transform: rotate(45deg);
+            margin-bottom: 5px;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* Instagram Grid Strip */
+        .ig-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            background: var(--black);
+            border-bottom: 5px solid var(--primary);
+        }
+
+        .ig-strip-item {
+            position: relative;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+        }
+
+        .ig-strip-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s, filter 0.3s;
+        }
+
+        .ig-strip-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.6);
+        }
+
+        .ig-strip-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .ig-strip-item:hover .ig-strip-overlay {
+            opacity: 1;
+        }
+
+        .ig-strip-overlay span {
+            color: white;
+            font-family: var(--font-logo);
+            font-size: 1.5rem;
+            border: 2px solid white;
+            padding: 10px;
+        }
+
+        .section-header {
+            text-align: center;
+            padding: 100px 5% 50px;
+            background: var(--black);
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            color: var(--white);
+            display: inline-block;
+            padding: 10px 30px;
+            background: var(--primary);
+            transform: rotate(-1deg);
+        }
+
+        /* Carta Grid */
+        .carta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 0 5% 100px;
+            background: var(--black);
+        }
+
+        .carta-card {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+            border: 5px solid var(--gray);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .carta-card:hover {
+            transform: scale(1.02);
+            border-color: var(--primary);
+        }
+
+        .carta-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+            transition: filter 0.3s;
+        }
+
+        .carta-card:hover img {
+            filter: brightness(0.9);
+        }
+
+        .carta-card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .carta-card h3 {
+            font-size: 2rem;
+            color: var(--white);
+            text-shadow: 3px 3px 0px var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .carta-card span {
+            background: var(--secondary);
+            color: var(--black);
+            padding: 5px 15px;
+            font-family: var(--font-logo);
+            font-size: 0.9rem;
+            border: 2px solid var(--white);
+        }
+
+        /* Eventos Section */
+        .eventos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 5% 100px;
+            background: var(--black);
+        }
+
+        .evento-card {
+            position: relative;
+            height: 380px;
+            border: 5px solid var(--gray);
+            text-align: center;
+            transition: all 0.3s;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .evento-card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.4);
+            transition: filter 0.3s, transform 0.4s;
+            z-index: 1;
+        }
+
+        .evento-card:hover {
+            transform: scale(1.02);
+            border-color: var(--green);
+            box-shadow: 0 10px 30px rgba(31, 138, 76, 0.3);
+        }
+
+        .evento-card:hover img {
+            filter: brightness(0.6);
+            transform: scale(1.1);
+        }
+
+        .evento-card-overlay {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .evento-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .evento-card h3 {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .evento-card p {
+            color: #d1d1d1;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Reserva Section */
+        .reserva-section {
+            padding: 100px 5%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('Fotos/Terraza.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reserva-info {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+        }
+
+        .reserva-info h2 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .reserva-info p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .reserva-form {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: var(--black);
+            padding: 40px;
+            border: 5px solid var(--primary);
+            box-shadow: 15px 15px 0px var(--secondary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-logo);
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: var(--gray);
+            border: 2px solid #444;
+            color: white;
+            font-family: var(--font-main);
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 40px 20px;
+            overflow-y: auto;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .modal-content {
+            max-width: 800px;
+            width: 100%;
+            margin: auto;
+            background: var(--gray);
+            border: 5px solid var(--white);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+            position: relative;
+            animation: modalZoom 0.3s ease-out;
+            padding: 40px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: var(--primary);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1100;
+            font-family: var(--font-logo);
+            border: 3px solid var(--white);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            color: var(--secondary);
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 0px var(--primary);
+        }
+
+        .modal-menu-list {
+            list-style: none;
+        }
+
+        .modal-menu-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #444;
+        }
+
+        .modal-menu-item h4 {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-family: var(--font-logo);
+        }
+
+        .modal-menu-item p {
+            color: #ccc;
+            line-height: 1.5;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 5px solid var(--primary);
+            background: var(--dark);
+        }
+
+        @media (max-width: 768px) {
+            .carta-grid {
+                grid-template-columns: 1fr;
+                padding-bottom: 50px;
+            }
+
+            .eventos-grid {
+                grid-template-columns: 1fr;
+                padding-bottom: 50px;
+            }
+
+            .ig-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .carta-card {
+                height: 250px;
+            }
+
+            .evento-card {
+                height: 320px;
+            }
+
+            .modal-content {
+                padding: 25px 15px;
+                width: 95%;
+                max-width: 100vw;
+                margin: auto 10px;
+            }
+
+            .reserva-info h2 {
+                font-size: 2rem;
+            }
+
+            .reserva-section {
+                padding: 60px 5%;
+                gap: 30px;
+            }
+
+            /* Fueron añadidos para forzar columnas en grid y flex a 1 columna vertical en móvil */
+            div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 10px !important;
+            }
+
+            /* Optimizar botones y tipografías grandes en móvil */
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+
+            .btn-main {
+                padding: 15px 20px;
+                font-size: 1rem;
+                flex: 1 1 100%;
+                text-align: center;
+            }
+
+            #eventoModal h2 {
+                font-size: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="Fotos/logo.png" alt="Logotipo de Ruta N2 Urban Food restaurante en Badalona"
+                style="max-width: 280px; margin-bottom: 20px; filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));">
+            <h1>RUTA N2</h1>
+            <p>EL SABOR DE LA CARRETERA EN BADALONA</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#carta" class="btn-main"
+                    style="background:var(--green); color:var(--white); border-color:var(--green);"
+                    title="Ver la carta completa del restaurante">CARTA</a>
+                <a href="#eventos" class="btn-main"
+                    style="background:var(--green); color:var(--white); border-color:var(--green);"
+                    title="Reservar para grupos y eventos">EVENTOS</a>
+                <a href="#reserva" class="btn-main"
+                    style="background:var(--green); color:var(--white); border-color:var(--green);"
+                    title="Reservar mesa en Ruta N2 Badalona">RESERVAR MESA</a>
+            </div>
+        </div>
+        <a href="#instagram" class="scroll-down" title="Ver nuestras redes sociales">
+            <span></span>
+            SÍGUENOS
+        </a>
+    </section>
+
+    <!-- Instagram Strip Section -->
+    <section id="instagram" class="ig-strip">
+        <a href="https://www.instagram.com/ruta.n2urbanfood/" target="_blank" class="ig-strip-item"
+            title="Síguenos en Instagram Ruta N2" rel="noopener noreferrer">
+            <img src="Fotos/Hamburguesa.png" alt="Hamburguesa de chuletón en Ruta N2 Badalona">
+            <div class="ig-strip-overlay"><span>@RUTA.N2</span></div>
+        </a>
+        <a href="https://www.instagram.com/ruta.n2urbanfood/" target="_blank" class="ig-strip-item"
+            title="Síguenos en Instagram Ruta N2" rel="noopener noreferrer">
+            <img src="Fotos/Tapas%20y%20raciones.png" alt="Tapas variadas en menú de Ruta N2 Badalona">
+            <div class="ig-strip-overlay"><span>@RUTA.N2</span></div>
+        </a>
+        <a href="https://www.instagram.com/ruta.n2urbanfood/" target="_blank" class="ig-strip-item"
+            title="Síguenos en Instagram Ruta N2" rel="noopener noreferrer">
+            <img src="Fotos/Terraza.png" alt="Terraza del restaurante Ruta N2 en Badalona">
+            <div class="ig-strip-overlay"><span>@RUTA.N2</span></div>
+        </a>
+    </section>
+
+    <div id="carta" class="section-header">
+        <h2>Nuestra Carta</h2>
+        <p style="margin-top: 10px; color: var(--secondary); font-weight: 700;">HAZ CLIC PARA VER EL DETALLE</p>
+    </div>
+
+    <div class="carta-grid">
+        <div class="carta-card" onclick="openMenu('burgers')">
+            <img src="Fotos/Hamburguesa.png" alt="Las mejores hamburguesas de chuletón en Badalona">
+            <div class="carta-card-overlay">
+                <h3>BURGERS</h3><span>VER CARTA</span>
+            </div>
+        </div>
+        <div class="carta-card" onclick="openMenu('frankfurts')">
+            <img src="Fotos/Frakfurts.jpeg" alt="Frankfurts y bratwurst a la parrilla Badalona">
+            <div class="carta-card-overlay">
+                <h3>FRANKFURTS</h3><span>VER CARTA</span>
+            </div>
+        </div>
+        <div class="carta-card" onclick="openMenu('tapas')">
+            <img src="Fotos/Tapas%20y%20raciones.png" alt="Tapas, raciones y nachos para compartir">
+            <div class="carta-card-overlay">
+                <h3>TAPAS</h3><span>VER CARTA</span>
+            </div>
+        </div>
+        <div class="carta-card" onclick="openMenu('patatas')">
+            <img src="Fotos/Patatas%20Naturales.png" alt="Patatas fritas caseras y bravas">
+            <div class="carta-card-overlay">
+                <h3>PATATAS</h3><span>VER CARTA</span>
+            </div>
+        </div>
+        <div class="carta-card" onclick="openMenu('planchados')">
+            <img src="Fotos/Planchados.png" alt="Bocadillos planchados y sándwiches">
+            <div class="carta-card-overlay">
+                <h3>PLANCHADOS</h3><span>VER CARTA</span>
+            </div>
+        </div>
+        <div class="carta-card" onclick="openMenu('saludable')">
+            <img src="Fotos/Saludable.png" alt="Opciones saludables, pokes y ensaladas">
+            <div class="carta-card-overlay">
+                <h3>SALUDABLE</h3><span>VER CARTA</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Eventos Section -->
+    <div id="eventos" class="section-header">
+        <h2>Eventos y Grupos</h2>
+        <p style="margin-top: 10px; color: var(--secondary); font-weight: 700;">CELEBRA TUS MEJORES MOMENTOS CON
+            NOSOTROS</p>
+    </div>
+
+    <div class="eventos-grid">
+        <div class="evento-card" onclick="openEventoModal('Cumpleaños')">
+            <img src="Fotos/evento_cumpleanos.png" alt="Cumpleaños y celebraciones en Badalona">
+            <div class="evento-card-overlay">
+                <div class="evento-icon">🎉</div>
+                <h3>Cumpleaños</h3>
+                <p>Menús a medida para ti y tus amigos.</p>
+                <span
+                    style="background: var(--secondary); color: var(--black); padding: 5px 15px; font-family: var(--font-logo); font-size: 0.9rem; border: 2px solid var(--white); margin-top: 15px; cursor: pointer;">RESERVAR
+                    EVENTO</span>
+            </div>
+        </div>
+        <div class="evento-card" onclick="openEventoModal('Cena de Empresa')">
+            <img src="Fotos/evento_empresa.png" alt="Cenas de empresa y eventos de grupo Badalona">
+            <div class="evento-card-overlay">
+                <div class="evento-icon">💼</div>
+                <h3>Cenas de Empresa</h3>
+                <p>Raciones y menús grupales para desconectar.</p>
+                <span
+                    style="background: var(--secondary); color: var(--black); padding: 5px 15px; font-family: var(--font-logo); font-size: 0.9rem; border: 2px solid var(--white); margin-top: 15px; cursor: pointer;">RESERVAR
+                    EVENTO</span>
+            </div>
+        </div>
+        <div class="evento-card" onclick="openEventoModal('Celebraciones')">
+            <img src="Fotos/evento_celebraciones.png" alt="Eventos en la terraza de Ruta N2 Urban Food">
+            <div class="evento-card-overlay">
+                <div class="evento-icon">🥂</div>
+                <h3>Celebraciones</h3>
+                <p>Nos encargamos de que sea inolvidable.</p>
+                <span
+                    style="background: var(--secondary); color: var(--black); padding: 5px 15px; font-family: var(--font-logo); font-size: 0.9rem; border: 2px solid var(--white); margin-top: 15px; cursor: pointer;">RESERVAR
+                    EVENTO</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Reserva Eventos -->
+    <div id="eventoModal" class="modal">
+        <style>
+            #eventoModal .modal-content {
+                padding: 20px 30px;
+                max-height: 100vh;
+                overflow-y: hidden;
+            }
+
+            #eventoModal .modal-header {
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+
+            #eventoModal .form-group {
+                margin-bottom: 10px;
+            }
+
+            #eventoModal .form-group label {
+                margin-bottom: 4px;
+                font-size: 0.8rem;
+            }
+
+            #eventoModal .form-group input,
+            #eventoModal .form-group textarea {
+                padding: 8px 12px;
+            }
+
+            #eventoModal .form-group textarea {
+                min-height: 60px;
+            }
+
+            #eventoModal h2 {
+                font-size: 1.8rem !important;
+            }
+
+            #eventoModal p {
+                margin-top: 2px !important;
+                margin-bottom: 0 !important;
+                font-size: 0.85rem !important;
+            }
+        </style>
+        <div class="modal-content"
+            style="background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('Fotos/evento_empresa.png'); background-size: cover; background-position: center; border-color: var(--secondary); max-width: 650px;">
+            <span class="modal-close"
+                style="background:var(--secondary); color:var(--black); border-color:var(--white); right: 10px; top: 10px;"
+                onclick="closeEventoModal()">&times;</span>
+            <div class="modal-header" style="border-bottom: 2px dashed #666;">
+                <h2 style="color: var(--secondary); text-shadow: none;">SOLICITA TU EVENTO</h2>
+                <p style="color: #ccc;">Haremos que tu celebración sea inolvidable. Cierra los detalles de tu <strong
+                        id="modalEventName" style="color:var(--primary); text-transform:uppercase;">Evento</strong>.</p>
+            </div>
+
+            <form id="eventoForm" class="reserva-form"
+                style="width:100%; max-width:100%; border: none; box-shadow: none; background: transparent; padding: 10px 0 0 0;"
+                onsubmit="handleReservationSubmit(event, true)">
+                <div class="form-group">
+                    <label>NOMBRE COMPLETO / EMPRESA</label>
+                    <input type="text" id="evento_name" placeholder="TU NOMBRE" required>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div class="form-group">
+                        <label>TIPO DE EVENTO</label>
+                        <input type="text" id="modalEventTypeInput" readonly
+                            style="color: #aaa; cursor: not-allowed; font-weight: bold; background: rgba(0,0,0,0.5);"
+                            title="Este campo viene seleccionado por la opción que pulsaste" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nº PERSONAS APROX.</label>
+                        <input type="number" id="evento_people" min="5" placeholder="Ej: 15" required>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div class="form-group">
+                        <label>FECHA ESTIMADA</label>
+                        <input type="date" id="evento_date" required onchange="actualizarAyudaHorario(this, 'evento_time_help')">
+                    </div>
+                    <div class="form-group">
+                        <label>HORA ESTIMADA</label>
+                        <input type="time" id="evento_time" required>
+                        <small id="evento_time_help" style="color: var(--primary); font-size: 0.7rem; display: block; margin-top: 2px;"></small>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div class="form-group">
+                        <label>TELÉFONO</label>
+                        <input type="tel" id="evento_phone" placeholder="TU TELÉFONO" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nº PERSONAS APROX.</label>
+                        <input type="number" id="evento_people" min="5" placeholder="Ej: 15" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>DETALLES U OBJECIONES</label>
+                    <textarea id="evento_notes" placeholder="Ej. Hay 2 personas celíacas. Somos un grupo joven..."
+                        title="Escribe aquí cualquier objeción o detalle importante para el evento" required></textarea>
+                </div>
+                <button type="submit" class="btn-main"
+                    style="width: 100%; padding: 12px 20px; border: none; background: var(--secondary); color: var(--black); margin-top: 5px; font-size: 1rem;"
+                    title="Enviar solicitud de evento">SOLICITAR PRESUPUESTO</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Reserva Section -->
+    <section id="reserva" class="reserva-section">
+        <div class="reserva-info">
+            <h2>RESERVA TU MESA</h2>
+            <p>Asegura tu sitio en el kilómetro 0 del sabor de Badalona. Ya sea para una cena con amigos o algo rápido,
+                en Ruta N2 te estamos esperando.</p>
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                <span style="background: var(--primary); padding: 10px; font-weight: 800;">TLF:</span>
+                <span style="font-size: 1.5rem; font-family: var(--font-logo);">931 234 567</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--secondary);">* Las reservas online deben hacerse con al menos 2
+                horas de antelación.</p>
+        </div>
+
+        <form id="mesaForm" class="reserva-form" onsubmit="handleReservationSubmit(event, false)">
+            <div class="form-group">
+                <label>NOMBRE COMPLETO</label>
+                <input type="text" id="mesa_name" placeholder="TU NOMBRE" required>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div class="form-group">
+                    <label>FECHA</label>
+                    <input type="date" id="mesa_date" required onchange="actualizarAyudaHorario(this, 'mesa_time_help')">
+                </div>
+                <div class="form-group">
+                    <label>HORA</label>
+                    <input type="time" id="mesa_time" required>
+                    <small id="mesa_time_help" style="color: var(--primary); font-size: 0.7rem; display: block; margin-top: 2px;"></small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>PERSONAS</label>
+                <select id="mesa_people">
+                    <option value="1">1 PERSONA</option>
+                    <option value="2" selected>2 PERSONAS</option>
+                    <option value="3">3 PERSONAS</option>
+                    <option value="4">4 PERSONAS</option>
+                    <option value="5">5 PERSONAS</option>
+                    <option value="6">6 PERSONAS</option>
+                    <option value="Más de 6">MÁS DE 6 (LLAMAR POR TELÉFONO)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>TELÉFONO</label>
+                <input type="tel" id="mesa_phone" placeholder="NÚMERO DE CONTACTO" required>
+            </div>
+            <button type="submit" class="btn-main"
+                style="width: 100%; border: none; background: var(--green);">CONFIRMAR RESERVA</button>
+        </form>
+    </section>
+
+    <!-- Modal Carta -->
+    <div id="cartaModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+            </div>
+            <div id="modalBody" class="modal-menu-list"></div>
+        </div>
+    </div>
+
+    <section style="background: var(--dark); padding: 50px 5%; text-align: center; border-top: 2px solid var(--primary);">
+        <h3 style="margin-bottom: 25px; color: var(--secondary);">HORARIOS RUTA N2</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; font-family: var(--font-logo); font-size: 0.9rem;">
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 5px;">
+                <p style="color: var(--primary);">DILLUNS</p>
+                <p>7:00 - 16:00</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 5px;">
+                <p style="color: var(--primary);">DIMARTS - DIJOUS</p>
+                <p>7:00 - 22:30</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 5px;">
+                <p style="color: var(--primary);">DIVENDRES</p>
+                <p>7:00 - 23:00</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 5px;">
+                <p style="color: var(--primary);">DISSABTE</p>
+                <p>8:00 - 3:00</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 5px;">
+                <p style="color: var(--primary);">DIUMENGE</p>
+                <p>9:00 - 19:00</p>
+            </div>
+        </div>
+        <p style="color: #888; margin-top: 40px; font-size: 0.8rem;">Ctra. de Mataró, 26, Badalona | DOG FRIENDLY • RETRO VIBES</p>
+        <div style="margin-top: 15px;">
+            <a href="https://www.instagram.com/ruta.n2urbanfood/" target="_blank"
+                style="color: var(--primary); font-family: var(--font-logo); font-size: 1.2rem; text-decoration: none;"
+                title="Página oficial de Instagram @ruta.n2urbanfood" rel="noopener noreferrer">@RUTA.N2URBANFOOD</a>
+        </div>
+        <a href="https://maps.google.com/?q=Ruta+N2+Urban+Food+Badalona" target="_blank"
+            style="color: var(--secondary); text-decoration: none; font-size: 0.8rem; display: block; margin-top: 10px;"
+            title="Ver ubicación en Google Maps" rel="noopener noreferrer">CÓMO LLEGAR</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ruta N2 Urban Food | Abiertos para ti</p>
+    </footer>
+
+    <script>
+        const menuData = {
+            burgers: {
+                title: "Las Burgers",
+                items: [
+                    { name: "La de Chuletón Curado", desc: "150gr de chuletón curado de burgos, lechuga, tomate fresco, cebolla, pepinillos y nuestra salsa barbacoa." },
+                    { name: "La Doble Smash", desc: "2 smash de 100gr de ternera de burgos, queso cheddar, bacon, pepinillos y salsa trufada." },
+                    { name: "La de Black Angus", desc: "150gr de ternera angus, lechuga, tomate fresco, cebolla, pepinillos y nuestra salsa barbacoa." },
+                    { name: "XL American Pollo", desc: "200gr de pollo crujiente, tomate, lechuga y cebolla en pan de mollete." }
+                ]
+            },
+            frankfurts: {
+                title: "Frankfurts",
+                items: [
+                    { name: "Especial Ruta N2", desc: "Frankfurt, queso cheddar, bacon, cebolla crujiente y salsa BBQ." },
+                    { name: "Bratwurst", desc: "Salchicha de carne picada de cerdo asada a la parrilla." },
+                    { name: "Picantwurst", desc: "Ligeramente picante con pimienta roja y blanca." },
+                    { name: "Malagueña", desc: "Salchicha de ternera sazonada con ajo." }
+                ]
+            },
+            tapas: {
+                title: "Tapas y Raciones",
+                items: [
+                    { name: "Nachos Ruta N2", desc: "Queso cheddar, crema de queso, guacamole, pulled porc, jalapeños y picadillo." },
+                    { name: "Fingers con Mostaza", desc: "Pechuga de pollo crujiente con nuestra salsa especial de mostaza." },
+                    { name: "Morros Fritos", desc: "Crujientes y en su punto justo de sal." },
+                    { name: "Croquetas Mix", desc: "Rabo de toro, jamón, boletus, bacalao o pollo." }
+                ]
+            },
+            patatas: {
+                title: "Patatas Naturales",
+                items: [
+                    { name: "Huevos Rotos e Ibérico", desc: "Patatas fritas naturales con huevos y jamón ibérico de bellota." },
+                    { name: "Bravas Caseras", desc: "Nuestra salsa brava secreta para los amantes del picante." },
+                    { name: "Bacon y Cheddar", desc: "Bañadas en salsa de queso y bacon crujiente." }
+                ]
+            },
+            planchados: {
+                title: "Los Planchados",
+                items: [
+                    { name: "Pepito con Pimiento", desc: "Ternera acompañada de pimiento verde y cebolla en bollo tierno." },
+                    { name: "Mallorquín con Brie", desc: "Sobrasada y queso brie fundido." },
+                    { name: "Club House Pollo", desc: "Tres pisos con pollo, bacon, cheddar, huevo, jamón, lechuga y tomate." }
+                ]
+            },
+            saludable: {
+                title: "Saludable y Pokes",
+                items: [
+                    { name: "Poke de Salmón", desc: "Edamame, pepino, mango, fresa, aguacate, salmón y salsa teriyaki." },
+                    { name: "Ensalada César", desc: "Pechuga de pollo, pan frito, queso y salsa César clásica." },
+                    { name: "Burrata y Pesto", desc: "Fresca burrata italiana con aliño de pesto artesano." }
+                ]
+            }
+        };
+
+        function openMenu(categoryKey) {
+            const data = menuData[categoryKey];
+            const modalBody = document.getElementById('modalBody');
+            document.getElementById('modalTitle').innerText = data.title;
+
+            let html = '';
+            data.items.forEach(item => {
+                html += `
+                    <div class="modal-menu-item">
+                        <h4>${item.name}</h4>
+                        <p>${item.desc}</p>
+                    </div>
+                `;
+            });
+
+            modalBody.innerHTML = html;
+            document.getElementById('cartaModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('cartaModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openEventoModal(eventType) {
+            document.getElementById('modalEventName').innerText = eventType;
+            document.getElementById('modalEventTypeInput').value = eventType;
+
+            document.getElementById('eventoModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeEventoModal() {
+            document.getElementById('eventoModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function isHorarioValido(fechaStr, horaStr) {
+            if (!fechaStr || !horaStr || horaStr === "N/A") return true;
+            
+            const fecha = new Date(fechaStr);
+            const diaSemana = fecha.getDay(); 
+            const [horas, minutos] = horaStr.split(':').map(Number);
+            const tiempoDecimal = horas + minutos / 60;
+
+            switch(diaSemana) {
+                case 1: return (tiempoDecimal >= 7 && tiempoDecimal <= 16);
+                case 2:
+                case 3:
+                case 4: return (tiempoDecimal >= 7 && tiempoDecimal <= 22.5);
+                case 5: return (tiempoDecimal >= 7 && tiempoDecimal <= 23);
+                case 6: // Sábado (8am a 3am)
+                    return (tiempoDecimal >= 8 || tiempoDecimal <= 3); 
+                case 0: return (tiempoDecimal >= 9 && tiempoDecimal <= 19);
+                default: return true;
+            }
+        }
+
+        function actualizarAyudaHorario(inputDate, helpId) {
+            const helpElement = document.getElementById(helpId);
+            if (!inputDate.value) return;
+            
+            const fecha = new Date(inputDate.value);
+            const dia = fecha.getDay();
+            let msg = "";
+            
+            if (dia === 1) msg = "Horario: 07:00 - 16:00";
+            else if (dia >= 2 && dia <= 4) msg = "Horario: 07:00 - 22:30";
+            else if (dia === 5) msg = "Horario: 07:00 - 23:00";
+            else if (dia === 6) msg = "Horario: 08:00 - 03:00";
+            else if (dia === 0) msg = "Horario: 09:00 - 19:00";
+            
+            helpElement.innerText = "ℹ️ " + msg;
+        }
+
+        window.onclick = function (event) {
+            let modal1 = document.getElementById('cartaModal');
+            let modal2 = document.getElementById('eventoModal');
+            if (event.target == modal1) closeModal();
+            if (event.target == modal2) closeEventoModal();
+        }
+
+        async function handleReservationSubmit(event, isEvento) {
+            event.preventDefault();
+            
+            let payload = {};
+            if (isEvento) {
+                payload = {
+                    name: document.getElementById('evento_name').value,
+                    eventType: document.getElementById('modalEventTypeInput').value,
+                    date: document.getElementById('evento_date').value,
+                    time: document.getElementById('evento_time').value,
+                    people: document.getElementById('evento_people').value,
+                    phone: document.getElementById('evento_phone').value,
+                    notes: document.getElementById('evento_notes').value
+                };
+            } else {
+                payload = {
+                    name: document.getElementById('mesa_name').value,
+                    eventType: "Reserva de Mesa",
+                    date: document.getElementById('mesa_date').value,
+                    time: document.getElementById('mesa_time').value,
+                    people: document.getElementById('mesa_people').value,
+                    phone: document.getElementById('mesa_phone').value,
+                    notes: ""
+                };
+            }
+
+            if (!isHorarioValido(payload.date, payload.time)) {
+                alert("⚠️ Lo sentimos, el restaurante está cerrado en ese horario. Por favor, consulta nuestros horarios en el pie de página.");
+                return;
+            }
+
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            
+            try {
+                // Desactivar botón para evitar duplicados
+                submitBtn.disabled = true;
+                submitBtn.innerText = "ENVIANDO...";
+
+                // En modo servidor Node.js, enviamos la petición a nuestra propia API local
+                const response = await fetch('/api/reservar', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    alert("¡Gracias por la reserva, te esperamos!");
+                    if (isEvento) closeEventoModal();
+                    event.target.reset();
+                    
+                    // Limpiar mensajes de ayuda de horario
+                    const helpIds = ['evento_time_help', 'mesa_time_help'];
+                    helpIds.forEach(id => {
+                        const el = document.getElementById(id);
+                        if(el) el.innerText = "";
+                    });
+
+                } else {
+                    alert("⚠️ Error: " + result.message);
+                }
+            } catch (error) {
+                console.error("Error contactando al servidor:", error);
+                alert("⚠️ Servidor no disponible. Asegúrate de que el servidor Node.js esté arrancado (npm start).");
+            } finally {
+                // Reactivar botón
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
+            }
+        }
+    </script>
+</body>
+
+</html>
