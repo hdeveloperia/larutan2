@@ -579,50 +579,66 @@
             }
 
             .carta-card {
-                height: 250px;
+                height: 220px;
             }
 
             .evento-card {
-                height: 320px;
+                height: 280px;
             }
 
             .modal-content {
-                padding: 25px 15px;
-                width: 95%;
+                padding: 20px 10px;
+                width: 98%;
                 max-width: 100vw;
-                margin: auto 10px;
+                margin: auto 5px;
             }
 
             .reserva-info h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .reserva-section {
-                padding: 60px 5%;
-                gap: 30px;
+                padding: 40px 5%;
+                gap: 20px;
             }
 
             /* Fueron añadidos para forzar columnas en grid y flex a 1 columna vertical en móvil */
             div[style*="grid-template-columns: 1fr 1fr"] {
                 grid-template-columns: 1fr !important;
-                gap: 10px !important;
+                gap: 5px !important;
             }
 
             /* Optimizar botones y tipografías grandes en móvil */
             .hero-content h1 {
-                font-size: 3.5rem;
+                font-size: 2.8rem !important; /* Más pequeño para que no ocupe toda la pantalla */
+            }
+
+            .hero-content p {
+                font-size: 1.1rem !important;
+                margin-bottom: 25px !important;
             }
 
             .btn-main {
-                padding: 15px 20px;
-                font-size: 1rem;
+                padding: 12px 18px !important;
+                font-size: 0.9rem !important;
                 flex: 1 1 100%;
                 text-align: center;
+                box-shadow: 4px 4px 0px var(--white) !important;
             }
 
             #eventoModal h2 {
-                font-size: 1.5rem !important;
+                font-size: 1.3rem !important;
             }
+            
+            #eventoModal p {
+                font-size: 0.7rem !important;
+            }
+
+            .ig-strip-overlay span {
+                font-size: 1rem !important;
+                padding: 5px !important;
+            }
+        }
         }
     </style>
 </head>
@@ -847,10 +863,6 @@
                     <div class="form-group">
                         <label>TELÉFONO</label>
                         <input type="tel" id="evento_phone" placeholder="TU TELÉFONO" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Nº PERSONAS APROX.</label>
-                        <input type="number" id="evento_people" min="5" placeholder="Ej: 15" required>
                     </div>
                 </div>
                 <div class="form-group">
