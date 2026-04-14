@@ -12,6 +12,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('.'));
 
+// Ruta explícita para la carta imprimible (soluciona problemas de acceso)
+app.get('/Carta_RutaN2_Printable.html', (req, res) => {
+    res.sendFile(process.cwd() + '/Carta_RutaN2_Printable.html');
+});
+
 // Configuración de Google Calendar API
 const SCOPES = ['https://www.googleapis.com/auth/calendar.events'];
 let calendar;

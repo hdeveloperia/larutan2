@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Carta Ruta N2</title>
+    <style>
+        body {
+            background: #050505;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 0 100px rgba(212, 175, 55, 0.4);
+            text-align: center;
+            border: 10px solid #D4AF37;
+        }
+        h2 { 
+            color: #000; 
+            margin-bottom: 25px; 
+            text-transform: uppercase; 
+            letter-spacing: 5px;
+            font-size: 2rem;
+            border-bottom: 4px solid #D4AF37;
+            padding-bottom: 10px;
+        }
+        img { 
+            width: 450px; 
+            height: 450px; 
+            display: block;
+            margin: 0 auto;
+        }
+        .footer-text { 
+            color: #555; 
+            font-size: 1rem; 
+            margin-top: 25px; 
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .url {
+            color: #888;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>RUTA N2</h2>
+        <!-- Generación de QR dinámico apuntando a la versión digital de la carta -->
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=https://larutan2.onrender.com/Carta_RutaN2_Printable.html" alt="QR Carta Ruta N2">
+        <p class="footer-text">ESCANEA PARA VER LA CARTA COMPLETA</p>
+        <p class="url">larutan2.onrender.com/Carta_RutaN2_Printable.html</p>
+    </div>
+</body>
+</html>

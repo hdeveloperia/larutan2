@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Oficial Ruta N2 - Detallada</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:wght@700;900&display=swap');
+
+        :root {
+            --primary: #D4AF37;
+            --red: #c0392b;
+            --black: #000000;
+            --dark: #070707;
+            --white: #ffffff;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: var(--black); 
+            color: var(--white); 
+            padding: 5px; margin: 0; display: flex; justify-content: center;
+        }
+
+        .menu-page { 
+            width: 950px; background: var(--dark); border: 8px solid var(--primary); padding: 40px; box-shadow: 15px 15px 0px var(--red); margin: 10px;
+        }
+
+        .header { text-align: center; border-bottom: 2px dashed var(--red); margin-bottom: 30px; padding-bottom: 20px; }
+        .header h1 { font-family: 'Playfair Display', serif; font-size: 5rem; margin: 0; color: var(--primary); letter-spacing: 12px; text-shadow: 4px 4px 0px var(--red); line-height: 1; }
+        .header p { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 6px; color: var(--white); font-weight: 800; margin-top: 10px; }
+
+        .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+        .category { margin-bottom: 25px; }
+        .category-title { background: var(--red); color: var(--white); display: inline-block; padding: 4px 15px; font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; margin-bottom: 15px; text-transform: uppercase; transform: skew(-10deg); }
+
+        .item { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .item-info { flex: 1; padding-right: 15px; }
+        .item-name { font-weight: 800; font-size: 0.9rem; color: var(--primary); margin: 0; text-transform: uppercase; }
+        .item-desc { color: #aaa; font-size: 0.75rem; margin: 3px 0 0 0; line-height: 1.2; }
+        .item-price { font-family: 'Playfair Display', serif; font-weight: 900; color: var(--white); font-size: 1rem; }
+
+        .footer { text-align: center; margin-top: 30px; border-top: 2px solid var(--primary); padding-top: 20px; }
+        .footer p { margin: 3px 0; font-weight: 700; letter-spacing: 1px; font-size: 0.85rem;}
+
+        @media print { body { background: white; } .menu-page { border: 4px solid black; box-shadow: none; width: 100%; margin: 0; } }
+    </style>
+</head>
+<body>
+    <div class="menu-page">
+        <div class="header">
+            <h1>RUTA N2</h1>
+            <p>Urban Food Badalona</p>
+        </div>
+
+        <div class="menu-grid">
+            <!-- COLUMNA 1 -->
+            <div>
+                <div class="category">
+                    <div class="category-title">Las Burgers</div>
+                    <div class="item"><div class="item-info"><p class="item-name">La de Chuletón Curado</p><p class="item-desc">150g ternera curada, lechuga, tomate, cebolla, pepinillo, BBQ.</p></div><span class="item-price">13,65€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Doble Smash Burger</p><p class="item-desc">2 smash 100g ternera, cheddar, bacon, pepinillo, salsa trufada.</p></div><span class="item-price">13,65€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">La de Black Angus</p><p class="item-desc">150g Angus premium, lechuga, tomate, cebolla y salsa especial.</p></div><span class="item-price">12,50€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">XL American Pollo</p><p class="item-desc">200g pollo crujiente, tomate, lechuga y cebolla morada.</p></div><span class="item-price">12,50€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Baby Burger (Ternera)</p><p class="item-desc">Sabor clásico 100% ternera para los más pequeños.</p></div><span class="item-price">8,05€</span></div>
+                </div>
+
+                <div class="category">
+                    <div class="category-title">Tapas & Raciones</div>
+                    <div class="item"><div class="item-info"><p class="item-name">Nachos Ruta N2 (Completo)</p><p class="item-desc">Cheddar, guacamole, pulled porc, jalapeños y picadillo.</p></div><span class="item-price">12,05€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Fingers Pollo Mostaza</p><p class="item-desc">Pechuga crujiente nacional con nuestra salsa mostaza.</p></div><span class="item-price">8,60€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Morros Fritos Crujientes</p><p class="item-desc">En su punto justo de sal y textura.</p></div><span class="item-price">6,90€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Croquetas Variadas (6 u.)</p><p class="item-desc">Jamón, rabo de toro o boletus caseras.</p></div><span class="item-price">9,00€</span></div>
+                </div>
+
+                <div class="category">
+                    <div class="category-title">Cervezas & Vinos</div>
+                    <div class="item"><div class="item-info"><p class="item-name">Caña Cerveza (Barril)</p></div><span class="item-price">2,20€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Copa Cerveza (Barril)</p></div><span class="item-price">3,20€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Jarra Cerveza (Barril)</p></div><span class="item-price">4,50€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Botella Tercio Nacional</p></div><span class="item-price">2,80€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Cerveza Artesana / Importación</p></div><span class="item-price">4,00€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Copa de Vino Tinto / Blanco</p></div><span class="item-price">3,50€</span></div>
+                </div>
+            </div>
+
+            <!-- COLUMNA 2 -->
+            <div>
+                <div class="category">
+                    <div class="category-title">Patatas & Planchados</div>
+                    <div class="item"><div class="item-info"><p class="item-name">Huevos Rotos e Ibérico</p><p class="item-desc">Recién cortadas con huevos frescos y jamón ibérico.</p></div><span class="item-price">10,50€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Bravas Ruta N2</p><p class="item-desc">Caseras con nuestra salsa brava secreta legendaria.</p></div><span class="item-price">6,50€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Club House Pollo</p><p class="item-desc">Pollo, cheddar, bacon y huevo en tres niveles.</p></div><span class="item-price">9,50€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Mallorquín con Brie</p><p class="item-desc">Sobrasada calidad y queso brie fundido.</p></div><span class="item-price">7,90€</span></div>
+                </div>
+
+                <div class="category">
+                    <div class="category-title">Refrescos</div>
+                    <div class="item"><div class="item-info"><p class="item-name">Coca-Cola (Original / Zero)</p></div><span class="item-price">2,50€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Fanta (Naranja / Limón)</p></div><span class="item-price">2,50€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Nestea / Aquarius</p></div><span class="item-price">2,50€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Agua Mineral (0,5 L)</p></div><span class="item-price">1,80€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Agua con Gas</p></div><span class="item-price">2,20€</span></div>
+                </div>
+
+                <div class="category">
+                    <div class="category-title">Cafetería Detallada</div>
+                    <div class="item"><div class="item-info"><p class="item-name">Café Solo / Expreso</p></div><span class="item-price">1,40€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Café Cortado</p></div><span class="item-price">1,50€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Café con Leche</p></div><span class="item-price">1,70€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Café Trifásico</p></div><span class="item-price">1,90€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Café Capuchino</p></div><span class="item-price">2,50€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Cacaolat / Cola Cao</p></div><span class="item-price">2,20€</span></div>
+                    <div class="item"><div class="item-info"><p class="item-name">Tés e Infusiones Varias</p></div><span class="item-price">1,80€</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📞 657 80 74 84 | 📍 Ctra. de Mataró, 26, Badalona</p>
+            <p style="color: var(--primary); font-size: 0.8rem;">www.larutan2.onrender.com</p>
+        </div>
+    </div>
+</body>
+</html>
