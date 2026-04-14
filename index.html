@@ -645,7 +645,7 @@
             }
 
             .evento-card {
-                height: 220px !important;
+                height: 300px !important;
             }
 
             /* MODALES */
@@ -707,17 +707,17 @@
     <section id="instagram" class="ig-strip">
         <a href="https://www.instagram.com/ruta.n2urbanfood/" target="_blank" class="ig-strip-item"
             title="Síguenos en Instagram Ruta N2" rel="noopener noreferrer">
-            <img src="Fotos/Hamburguesa.png" alt="Hamburguesa de chuletón en Ruta N2 Badalona">
+            <img src="Fotos/ig_cafe.png" alt="Empieza tu día con buen café en Ruta N2 Badalona">
             <div class="ig-strip-overlay"><span>@RUTA.N2</span></div>
         </a>
         <a href="https://www.instagram.com/ruta.n2urbanfood/" target="_blank" class="ig-strip-item"
             title="Síguenos en Instagram Ruta N2" rel="noopener noreferrer">
-            <img src="Fotos/Tapas%20y%20raciones.png" alt="Tapas variadas en menú de Ruta N2 Badalona">
+            <img src="Fotos/ig_mural.png" alt="Mural artístico en Ruta N2 Urban Food Badalona">
             <div class="ig-strip-overlay"><span>@RUTA.N2</span></div>
         </a>
         <a href="https://www.instagram.com/ruta.n2urbanfood/" target="_blank" class="ig-strip-item"
             title="Síguenos en Instagram Ruta N2" rel="noopener noreferrer">
-            <img src="Fotos/Terraza.png" alt="Terraza del restaurante Ruta N2 en Badalona">
+            <img src="Fotos/ig_futbol.png" alt="Disfruta del fútbol y eventos deportivos en Ruta N2">
             <div class="ig-strip-overlay"><span>@RUTA.N2</span></div>
         </a>
     </section>
@@ -765,6 +765,57 @@
             </div>
         </div>
     </div>
+
+    <!-- Reserva Section (Reordered) -->
+    <section id="reserva" class="reserva-section">
+        <div class="reserva-info">
+            <h2>RESERVA TU MESA</h2>
+            <p>Asegura tu sitio en el kilómetro 0 del sabor de Badalona. Ya sea para una cena con amigos o algo rápido,
+                en Ruta N2 te estamos esperando.</p>
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                <span style="background: var(--primary); padding: 10px; font-weight: 800;">TLF:</span>
+                <span style="font-size: 1.5rem; font-family: var(--font-logo);">657 80 74 84</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--secondary);">* Las reservas online deben hacerse con al menos 2
+                horas de antelación.</p>
+        </div>
+
+        <form id="mesaForm" class="reserva-form" onsubmit="handleReservationSubmit(event, false)">
+            <div class="form-group">
+                <label>NOMBRE COMPLETO</label>
+                <input type="text" id="mesa_name" placeholder="TU NOMBRE" required>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div class="form-group">
+                    <label>FECHA</label>
+                    <input type="date" id="mesa_date" required onchange="actualizarAyudaHorario(this, 'mesa_time_help')">
+                </div>
+                <div class="form-group">
+                    <label>HORA</label>
+                    <input type="time" id="mesa_time" required>
+                    <small id="mesa_time_help" style="color: var(--primary); font-size: 0.7rem; display: block; margin-top: 2px;"></small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>PERSONAS</label>
+                <select id="mesa_people">
+                    <option value="1">1 PERSONA</option>
+                    <option value="2" selected>2 PERSONAS</option>
+                    <option value="3">3 PERSONAS</option>
+                    <option value="4">4 PERSONAS</option>
+                    <option value="5">5 PERSONAS</option>
+                    <option value="6">6 PERSONAS</option>
+                    <option value="Más de 6">MÁS DE 6 (LLAMAR AL 657 80 74 84)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>TELÉFONO</label>
+                <input type="tel" id="mesa_phone" placeholder="NÚMERO DE CONTACTO" required>
+            </div>
+            <button type="submit" class="btn-main"
+                style="width: 100%; border: none; background: var(--green);">CONFIRMAR RESERVA</button>
+        </form>
+    </section>
 
     <!-- Eventos Section -->
     <div id="eventos" class="section-header">
@@ -911,56 +962,7 @@
         </div>
     </div>
 
-    <!-- Reserva Section -->
-    <section id="reserva" class="reserva-section">
-        <div class="reserva-info">
-            <h2>RESERVA TU MESA</h2>
-            <p>Asegura tu sitio en el kilómetro 0 del sabor de Badalona. Ya sea para una cena con amigos o algo rápido,
-                en Ruta N2 te estamos esperando.</p>
-            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                <span style="background: var(--primary); padding: 10px; font-weight: 800;">TLF:</span>
-                <span style="font-size: 1.5rem; font-family: var(--font-logo);">657 80 74 84</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--secondary);">* Las reservas online deben hacerse con al menos 2
-                horas de antelación.</p>
-        </div>
 
-        <form id="mesaForm" class="reserva-form" onsubmit="handleReservationSubmit(event, false)">
-            <div class="form-group">
-                <label>NOMBRE COMPLETO</label>
-                <input type="text" id="mesa_name" placeholder="TU NOMBRE" required>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                <div class="form-group">
-                    <label>FECHA</label>
-                    <input type="date" id="mesa_date" required onchange="actualizarAyudaHorario(this, 'mesa_time_help')">
-                </div>
-                <div class="form-group">
-                    <label>HORA</label>
-                    <input type="time" id="mesa_time" required>
-                    <small id="mesa_time_help" style="color: var(--primary); font-size: 0.7rem; display: block; margin-top: 2px;"></small>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>PERSONAS</label>
-                <select id="mesa_people">
-                    <option value="1">1 PERSONA</option>
-                    <option value="2" selected>2 PERSONAS</option>
-                    <option value="3">3 PERSONAS</option>
-                    <option value="4">4 PERSONAS</option>
-                    <option value="5">5 PERSONAS</option>
-                    <option value="6">6 PERSONAS</option>
-                    <option value="Más de 6">MÁS DE 6 (LLAMAR AL 657 80 74 84)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>TELÉFONO</label>
-                <input type="tel" id="mesa_phone" placeholder="NÚMERO DE CONTACTO" required>
-            </div>
-            <button type="submit" class="btn-main"
-                style="width: 100%; border: none; background: var(--green);">CONFIRMAR RESERVA</button>
-        </form>
-    </section>
 
     <!-- Modal Carta -->
     <div id="cartaModal" class="modal">
