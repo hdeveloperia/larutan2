@@ -578,67 +578,95 @@
                 grid-template-columns: 1fr;
             }
 
+        /* REVISIÓN MOVIL AGRESIVA */
+        @media (max-width: 768px) {
+            section.hero {
+                padding-top: 60px !important; /* Espacio arriba para que el logo no pegue al borde */
+                height: auto !important;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero-content img {
+                max-width: 180px !important; /* Logo mucho más pequeño en móvil */
+                margin-bottom: 10px !important;
+            }
+
+            h1 { 
+                font-size: 2.2rem !important; 
+                text-shadow: 3px 3px 0px var(--white) !important;
+                margin-bottom: 5px !important;
+            }
+
+            .hero p { 
+                font-size: 0.9rem !important; 
+                margin-bottom: 20px !important; 
+                letter-spacing: 1px !important;
+            }
+
+            .btn-main { 
+                padding: 12px 20px !important; 
+                font-size: 0.85rem !important; 
+                box-shadow: 4px 4px 0px var(--white) !important;
+                border-width: 2px !important;
+                width: 100% !important; /* Botones uno debajo de otro para más orden */
+                max-width: 250px;
+                margin: 0 auto !important;
+            }
+
+            .hero-content div[style*="display: flex"] {
+                flex-direction: column !important;
+                gap: 12px !important;
+            }
+
+            section { 
+                padding: 40px 5% !important; 
+            }
+
+            .section-header h2 { 
+                font-size: 1.8rem !important; 
+            }
+
+            /* TARJETAS DE LA CARTA (CABEN 2 POR LÍNEA O SON MÁS CORTAS) */
+            .carta-grid {
+                grid-template-columns: 1fr 1fr !important; /* Dos cartas por fila para que no ocupen toda la pantalla vertical */
+                gap: 10px !important;
+            }
+
             .carta-card {
-                height: 220px;
+                height: 180px !important; /* Mucho más bajas */
+                padding: 10px !important;
+            }
+
+            .carta-card h3 {
+                font-size: 0.9rem !important;
             }
 
             .evento-card {
-                height: 280px;
+                height: 220px !important;
             }
 
+            /* MODALES */
             .modal-content {
-                padding: 20px 10px;
-                width: 98%;
-                max-width: 100vw;
-                margin: auto 5px;
+                padding: 15px !important;
+                width: 95% !important;
             }
 
-            .reserva-info h2 {
-                font-size: 1.8rem;
-            }
-
-            .reserva-section {
-                padding: 40px 5%;
-                gap: 20px;
-            }
-
-            /* Fueron añadidos para forzar columnas en grid y flex a 1 columna vertical en móvil */
-            div[style*="grid-template-columns: 1fr 1fr"] {
-                grid-template-columns: 1fr !important;
-                gap: 5px !important;
-            }
-
-            /* Optimizar botones y tipografías grandes en móvil */
-            .hero-content h1 {
-                font-size: 2.8rem !important; /* Más pequeño para que no ocupe toda la pantalla */
-            }
-
-            .hero-content p {
-                font-size: 1.1rem !important;
-                margin-bottom: 25px !important;
-            }
-
-            .btn-main {
-                padding: 12px 18px !important;
-                font-size: 0.9rem !important;
-                flex: 1 1 100%;
-                text-align: center;
-                box-shadow: 4px 4px 0px var(--white) !important;
-            }
-
-            #eventoModal h2 {
-                font-size: 1.3rem !important;
-            }
+            .modal-header h2 { font-size: 1.2rem !important; }
             
-            #eventoModal p {
-                font-size: 0.7rem !important;
+            /* FORMULARIOS */
+            .reserva-form input, .reserva-form select, .reserva-form textarea {
+                padding: 10px !important;
+                font-size: 0.9rem !important;
             }
 
-            .ig-strip-overlay span {
-                font-size: 1rem !important;
-                padding: 5px !important;
+            /* HORARIOS */
+            div[style*="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))"] {
+                grid-template-columns: 1fr 1fr !important;
+                font-size: 0.75rem !important;
             }
-        }
         }
     </style>
 </head>
