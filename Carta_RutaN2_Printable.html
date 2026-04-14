@@ -15,15 +15,25 @@
             --white: #ffffff;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         body { 
             font-family: 'Inter', sans-serif; 
             background: var(--black); 
             color: var(--white); 
-            padding: 5px; margin: 0; display: flex; justify-content: center;
+            padding: 10px; margin: 0; display: flex; justify-content: center;
         }
 
         .menu-page { 
-            width: 950px; background: var(--dark); border: 8px solid var(--primary); padding: 40px; box-shadow: 15px 15px 0px var(--red); margin: 10px;
+            width: 100%;
+            max-width: 950px; 
+            background: var(--dark); 
+            border: 8px solid var(--primary); 
+            padding: 40px; 
+            box-shadow: 15px 15px 0px var(--red); 
+            margin: 10px auto;
         }
 
         .header { text-align: center; border-bottom: 2px dashed var(--red); margin-bottom: 30px; padding-bottom: 20px; }
@@ -43,6 +53,14 @@
 
         .footer { text-align: center; margin-top: 30px; border-top: 2px solid var(--primary); padding-top: 20px; }
         .footer p { margin: 3px 0; font-weight: 700; letter-spacing: 1px; font-size: 0.85rem;}
+
+        @media screen and (max-width: 768px) {
+            .menu-page { padding: 20px; border-width: 4px; }
+            .header h1 { font-size: 2.8rem; letter-spacing: 5px; }
+            .header p { font-size: 0.9rem; letter-spacing: 3px; }
+            .menu-grid { grid-template-columns: 1fr; gap: 20px; }
+            .category-title { font-size: 1.2rem; }
+        }
 
         @media print { body { background: white; } .menu-page { border: 4px solid black; box-shadow: none; width: 100%; margin: 0; } }
     </style>
